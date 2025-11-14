@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achadinhos Shopee - Produtos Incríveis para Casa e Pets</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        header { background-color: #ee4d2d; color: white; text-align: center; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .product { background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
+        .product img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+        .product h3 { font-size: 18px; margin: 10px 0; }
+        .product p { font-size: 14px; color: #666; margin-bottom: 10px; }
+        .btn { display: inline-block; background-color: #ee4d2d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+        .btn:hover { background-color: #d43f24; }
+        footer { text-align: center; padding: 20px; background-color: #333; color: white; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Achadinhos Incríveis na Shopee</h1>
+        <p>Descubra produtos práticos e acessíveis para o dia a dia, pets e casa!</p>
+    </header>
+    <div class="container">
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://cf.shopee.com.br/file/19999071608/c2b2a0b8a7d4f1e4e4e4e4e4e4e4e4e4" alt="Capa Decorativa para Porta" onerror="this.src='https://via.placeholder.com/300x200?text=Capa+Decorativa+para+Porta';">
+                <h3>Capa Decorativa para Porta</h3>
+                <p>Decore sua entrada com estilo e praticidade. Vários temas disponíveis!</p>
+                <a href="https://br.shp.ee/c53co2b?smtt=0.0.9" class="btn" target="_blank">Ver na Shopee</a>
+            </div>
+            <div class="product">
+                <img src="https://cf.shopee.com.br/file/21865748331/4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4" alt="Mochila de Transportar Pet" onerror="this.src='https://via.placeholder.com/300x200?text=Mochila+Pet';">
+                <h3>Mochila de Transportar Pet</h3>
+                <p>Leve seu pet com conforto e segurança em passeios ou viagens.</p>
+                <a href="https://br.shp.ee/x1110te?smtt=0.0.9" class="btn" target="_blank">Ver na Shopee</a>
+            </div>
+            <div class="product">
+                <img src="https://cf.shopee.com.br/file/6382322862/5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5" alt="Bicicleta Ergométrica Portátil" onerror="this.src='https://via.placeholder.com/300x200?text=Bicicleta+Ergométrica';">
+                <h3>Bicicleta Ergométrica Portátil</h3>
+                <p>Exercícios em casa sem ocupar espaço. Ideal para pernas e braços!</p>
+                <a href="https://br.shp.ee/nzafqj1?smtt=0.0.9" class="btn" target="_blank">Ver na Shopee</a>
+            </div>
+            <div class="product">
+                <img src="https://cf.shopee.com.br/file/23892316561/6g6g6g6g6g6g6g6g6g6g6g6g6g6g6g6" alt="3 em 1 Carregador, Som e Luminária" onerror="this.src='https://via.placeholder.com/300x200?text=3+em+1+G-Speaker';">
+                <h3>3 em 1: Carregador, Som e Luminária</h3>
+                <p>Multifuncional: carrega sem fio, toca música e ilumina com LED colorido.</p>
+                <a href="https://br.shp.ee/36pontu?smtt=0.0.9" class="btn" target="_blank">Ver na Shopee</a>
+            </div>
+            <div class="product">
+                <img src="https://cf.shopee.com.br/file/23193050213/7h7h7h7h7h7h7h7h7h7h7h7h7h7h7h7" alt="Fruteira Inteligente de Canto" onerror="this.src='https://via.placeholder.com/300x200?text=Fruteira+de+Canto';">
+                <h3>Fruteira Inteligente de Canto de Parede</h3>
+                <p>Otimize o espaço na cozinha com esta fruteira suspensa e organizada.</p>
+                <a href="https://br.shp.ee/kjyijgf?smtt=0.0.9" class="btn" target="_blank">Ver na Shopee</a>
+            </div>
+            <div class="product">
+                <img src="https://cf.shopee.com.br/file/8i8i8i8i8i8i8i8i8i8i8i8i8i8i8i8" alt="Purificador de Ar Portátil" onerror="this.src='https://via.placeholder.com/300x200?text=Purificador+de+Ar';">
+                <h3>Purificador de Ar Portátil</h3>
+                <p>Ar limpo onde você for. Compacto e eficiente para alérgicos.</p>
+                <a href="https://br.shp.ee/m7504rb?smtt=0.0.9" class="btn" target="_blank">Ver na Shopee</a>
+            </div>
+            <div class="product">
+                <img src="https://cf.shopee.com.br/file/14260393644/9j9j9j9j9j9j9j9j9j9j9j9j9j9j9j" alt="Bolinha Interativa para Pet" onerror="this.src='https://via.placeholder.com/300x200?text=Bolinha+Interativa+Pet';">
+                <h3>Bolinha Interativa para Pet</h3>
+                <p>Brinquedo que simula caça: diverte seu pet sozinho por horas!</p>
+                <a href="https://br.shp.ee/wq7wp3g?smtt=0.0.9" class="btn" target="_blank">Ver na Shopee</a>
+            </div>
+            <div class="product">
+                <img src="https://cf.shopee.com.br/file/22092066024/0k0k0k0k0k0k0k0k0k0k0k0k0k0k0k0" alt="Varal Inteligente para Ambiente Pequeno" onerror="this.src='https://via.placeholder.com/300x200?text=Varal+Inteligente';">
+                <h3>Varal Inteligente para Ambiente Pequeno</h3>
+                <p>Secagem de roupas sem bagunça em espaços compactos.</p>
+                <a href="https://br.shp.ee/hz49de0?smtt=0.0.9" class="btn" target="_blank">Ver na Shopee</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Achadinhos Shopee. Links afiliados - Compre e apoie o blog!</p>
+    </footer>
+</body>
+</html>
