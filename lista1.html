@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achados Incríveis na Shopee 🛍️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --secondary: #F7931E;
+            --accent: #FF4081;
+            --dark-bg: #1a1a2e;
+            --dark-card: #16213e;
+            --light-bg: #fff5f5;
+            --light-card: #ffffff;
+            --text-dark: #2d2d2d;
+            --text-light: #e8e8e8;
+            --shadow: 0 10px 30px rgba(0,0,0,0.2);
+            --gradient: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FF4081 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light-bg);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark {
+            background: var(--dark-bg);
+            color: var(--text-light);
+        }
+
+        .dark {
+            --light-bg: #1a1a2e;
+            --light-card: #16213e;
+            --text-dark: #e8e8e8;
+        }
+
+        /* Animated Background */
+        .bg-decoration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-decoration::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .bg-decoration::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,64,129,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(50px, 50px) rotate(90deg); }
+            50% { transform: translate(0, 100px) rotate(180deg); }
+            75% { transform: translate(-50px, 50px) rotate(270deg); }
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            position: relative;
+        }
+
+        .logo {
+            font-family: 'Righteous', cursive;
+            font-size: 3rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 300;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .product-card {
+            background: var(--light-card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.6s ease-out backwards;
+            position: relative;
+        }
+
+        .dark .product-card {
+            background: var(--dark-card);
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
+        .product-card:nth-child(4) { animation-delay: 0.4s; }
+        .product-card:nth-child(5) { animation-delay: 0.5s; }
+        .product-card:nth-child(6) { animation-delay: 0.6s; }
+        .product-card:nth-child(7) { animation-delay: 0.7s; }
+        .product-card:nth-child(8) { animation-delay: 0.8s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255,107,53,0.3);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:nth-child(1) .product-image { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .product-card:nth-child(2) .product-image { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .product-card:nth-child(3) .product-image { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .product-card:nth-child(4) .product-image { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .product-card:nth-child(5) .product-image { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+        .product-card:nth-child(6) .product-image { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+        .product-card:nth-child(7) .product-image { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+        .product-card:nth-child(8) .product-image { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .product-card:hover .product-image::before {
+            left: 100%;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.95);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            min-height: 60px;
+        }
+
+        .dark .product-title {
+            color: var(--text-light);
+        }
+
+        .product-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .product-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255,107,53,0.4);
+        }
+
+        .product-btn i {
+            margin-left: 0.5rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(37,211,102,0.6);
+        }
+
+        .whatsapp-btn i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+            }
+            50% {
+                box-shadow: 0 8px 30px rgba(37,211,102,0.7);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--light-card);
+            margin-top: 3rem;
+        }
+
+        .dark footer {
+            background: var(--dark-card);
+        }
+
+        footer p {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        .dark footer p {
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .whatsapp-btn {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-btn i {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-decoration"></div>
+
+    <header>
+        <h1 class="logo">Achados Shopee</h1>
+        <p class="subtitle">✨ Produtos selecionados especialmente pra você ✨</p>
+    </header>
+
+    <div class="container">
+        <div class="products-grid">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    🚪
+                    <span class="badge">Novo!</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Capa Decorativa para Porta</h3>
+                    <a href="https://br.shp.ee/c53co2b?smtt=0.0.9" target="_blank" class="product-btn">
+                        Ver na Shopee <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    🐾
+                    <span class="badge">Pet Friendly</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Mochila de Transportar Pet</h3>
+                    <a href="https://br.shp.ee/x1110te?smtt=0.0.9" target="_blank" class="product-btn">
+                        Ver na Shopee <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    🚴
+                    <span class="badge">Fitness</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Bicicleta Ergométrica Portátil</h3>
+                    <a href="https://br.shp.ee/nzafqj1?smtt=0.0.9" target="_blank" class="product-btn">
+                        Ver na Shopee <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    📱💡🔊
+                    <span class="badge">3 em 1</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Carregador Indução + Caixa de Som + Luminária</h3>
+                    <a href="https://br.shp.ee/36pontu?smtt=0.0.9" target="_blank" class="product-btn">
+                        Ver na Shopee <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    🍎🍊
+                    <span class="badge">Smart</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Fruteira Inteligente de Canto de Parede</h3>
+                    <a href="https://br.shp.ee/kjyijgf?smtt=0.0.9" target="_blank" class="product-btn">
+                        Ver na Shopee <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    💨
+                    <span class="badge">Saúde</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Purificador de Ar Portátil</h3>
+                    <a href="https://br.shp.ee/m7504rb?smtt=0.0.9" target="_blank" class="product-btn">
+                        Ver na Shopee <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    🐱
+                    <span class="badge">Pet Friendly</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Bolinha Interativa para Pet (simula presa)</h3>
+                    <a href="https://br.shp.ee/wq7wp3g?smtt=0.0.9" target="_blank" class="product-btn">
+                        Ver na Shopee <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    👕
+                    <span class="badge">Compacto</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Varal Inteligente para Ambiente Pequeno</h3>
+                    <a href="https://br.shp.ee/hz49de0?smtt=0.0.9" target="_blank" class="product-btn">
+                        Ver na Shopee <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/?text=Oi,%20vc%20tem%20algum%20cupom%20disponível%20aí?" target="_blank" class="whatsapp-btn" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>💝 Produtos selecionados com carinho | Shopee Brasil</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">* Os links podem conter afiliação</p>
+    </footer>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>
+
